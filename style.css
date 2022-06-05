@@ -5,39 +5,42 @@
     
 }
 
-body{
+*{
+    color: white;
+    font-family: 'Inconsolata', monospace;
     line-height: 2.0;
+}
+
+body{
     background-image: url(https://cdn.pixabay.com/photo/2015/09/17/17/25/code-944499_960_720.jpg);
     background-repeat: repeat;
-    font-family: 'Inconsolata', monospace;
 }
 
 header{
     background-color: rgb(119, 47, 119);
     display: flex;
     justify-content: center;
-    font-size: 30px;
-    color: white;
+    font-size: 35px;
     margin: -10px;
+    margin-bottom: 20px;
 }
 
 /* navigation bar: set's background color and centers the navigation list items */
 nav{ 
-    background-color: rgb(122, 34, 122);
-    display: flex;
-    justify-content: center;
-    margin: -10px;
+    background-color: rgba(122, 34, 122, 0.666);
+     margin: -10px;
 }
 
 /* centers the text of the links and positions them in a row */
 .list{
-    text-align: center;
+    justify-content: center;
+    justify-content: space-evenly;
     display: flex;
     display: row;
     margin-top: -30px;
     margin-bottom: -30px; 
     list-style: none;
-    padding: 10px;
+    
 } 
 
 /* padding between list elements */
@@ -45,16 +48,14 @@ li{
     padding: 20px;
 }
 
-/* positions the github icon link */
-.github-link {
-    position: relative;
-    top: 2px;
-}
-
-/* changes text color of the links */
-.navbar-list{
-    color: white;
+li a{
+  
     text-decoration: none;
+    font-size: 18px;
+    background-color: rgba(183, 64, 84, 0.442);
+    transition: background-color ease-out 1s;
+    padding: 5px;
+    border-radius: 50px;
 }
 
 #portfolio-image{
@@ -68,23 +69,42 @@ li{
 
 h1{
     font-size: 1.7em;
-    border: 2px dashed purple;
-    padding: 5px;
+    background-color: rgba(128, 0, 128, 0.458);
+    border-radius: 12.5px;
+    float: left; 
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transition: background-color ease-out 1s;
 }
 
-.about-me{
-    background-color: rgba(72, 69, 69, 0.833);
+#about-me{
+    background-color: rgba(72, 69, 69, 0.844);
     padding: 20px; 
     margin: 20px;
     margin-top: -10px; 
-    height: 250px; 
-    color: rgb(254, 254, 254); 
+    height: 230px;  
     border-radius: 25px;
-    text-shadow: 2px 2px rgba(128, 0, 128, 0.784);
+}
 
+#about-me p{
+    font-size: 1.1em;
 }
 
 footer{
     background-color: rgba(72, 69, 69, 0.833);
-    color: white;
+    height: 50px;
+}
+
+
+
+a:hover{
+     background-color: rgba(13, 233, 13, 0.557);
+}
+
+h1:hover{
+    background-color: rgba(13, 233, 13, 0.557);
 }
