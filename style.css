@@ -48,14 +48,14 @@ li{
     padding: 20px;
 }
 
-li a{
-  
+a{
     text-decoration: none;
     font-size: 18px;
     background-color: rgba(183, 64, 84, 0.442);
     transition: background-color ease-out 1s;
-    padding: 5px;
+    padding: 10px;
     border-radius: 50px;
+    margin: 80px;
 }
 
 #portfolio-image{
@@ -94,12 +94,28 @@ h1{
     font-size: 1.1em;
 }
 
-footer{
-    background-color: rgba(72, 69, 69, 0.833);
-    height: 50px;
+#my-projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(72, 69, 69, 0.844);
+    justify-content: space-evenly;
 }
 
+#my-projects img{
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+}
 
+footer{
+    background-color: rgba(122, 34, 122, 0.666);
+    height: 50px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
 
 a:hover{
      background-color: rgba(13, 233, 13, 0.557);
