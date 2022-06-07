@@ -36,9 +36,8 @@ nav{
 /* centers text of links and positions them in a row */
 ul{
     display: flex;
-    display: row;
+    flex-direction: row;
     justify-content: center;
-    justify-content: space-evenly;
     margin-top: -20px;
     list-style: none;
     
@@ -111,11 +110,17 @@ h1{
     margin: 30px;
 }
 
+.my-projects h1{
+    height: 300px; width: 600px;
+}
+
 .my-projects img{
     border-radius: 12.5px;
     margin: 10px;
     display: flex; 
     justify-content: space-evenly;
+    height: 300px; 
+    width: 600px;
 }
 
 /* styles and gives transition to project links according to the image styling */
@@ -162,6 +167,35 @@ footer{
     }
 }  
 
-@media screen and (max-width: 900px){
+/* adjusts webpage to viewport 1355px or less */
+@media screen and (max-device-width: 1355px){
+    li{
+        display: flex; 
+        align-items: center;
+        margin: -50px;
+    }
+
+    ul{
+        margin: -20px;
+    }    
     
+
+    .about-me p{
+        font-size: 0.9em;
+    }
+
+    .my-projects img{
+        height: 400px; 
+        width: 400px;
+    }
+
+    .my-projects h1{
+        height: 400px; 
+        width: 400px;
+        font-size: 2.0em;
+    }
+
+    address{
+        margin: -20px;
+    }
 }
