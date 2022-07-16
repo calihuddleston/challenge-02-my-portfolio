@@ -1,0 +1,201 @@
+/* add media queries for a responsive page */
+:root{
+    --gray: rgba(72, 69, 69, 0.844);
+    --purple: rgba(122, 34, 122, 0.666);
+    --hover-green: rgba(13, 233, 13, 0.242);
+    --background-color-transition: background-color ease-out 1s;
+}
+
+*{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    line-height: 2.0;
+}
+
+/* background image */
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/17/17/25/code-944499_960_720.jpg);
+    background-repeat: repeat;
+}
+
+header{
+    background-color: rgb(119, 47, 119);
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin: -10px;
+    margin-bottom: 20px;
+}
+
+/* navigation bar: set's background color and given a margin to fill the entire webpage window */
+nav{ 
+    background-color: var(--purple);
+    margin: -10px;
+}
+
+/* centers text of links and positions them in a row */
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -20px;
+    list-style: none;
+    
+} 
+
+/* padding between list elements */
+li{
+    padding: 20px;
+}
+
+/* styles navigation bar and footer links */
+.portfolio-links{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: rgba(183, 64, 84, 0.442);
+    transition: var(--background-color-transition);
+    padding: 10px;
+    border-radius: 50px;
+    margin: 80px;
+}
+
+#portfolio-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    padding: 35px;
+}
+
+h1{
+    font-size: 1.7em;
+    background-color: var(--purple);
+    border-radius: 12.5px;
+    float: left; 
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transition: var(--background-color-transition);
+}
+
+/* styles and positions about me section */
+.about-me{
+    background-color: var(--gray);
+    padding: 20px; 
+    margin: 20px;
+    margin-top: -10px; 
+    height: 230px;  
+    border-radius: 25px;
+}
+
+/* styles and positions about me paragraph */
+.about-me p{
+    font-size: 1.1em;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* styles and positions project section */
+.my-projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--gray);
+    border-radius: 25px;
+    margin: 30px;
+}
+
+.my-projects h1{
+    height: 300px; width: 600px;
+}
+
+.my-projects img{
+    border-radius: 12.5px;
+    margin: 10px;
+    display: flex; 
+    justify-content: space-evenly;
+    height: 300px; 
+    width: 600px;
+}
+
+/* styles and gives transition to project links according to the image styling */
+.my-project-links{
+    border-radius: 20px;
+    transition: background-color ease-in-out 1s;
+    margin: 10px;
+}
+
+footer{
+    background-color: var(--purple);
+    height: 50px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: -10px;
+}
+
+.portfolio-links:hover{
+     background-color: var(--hover-green);
+}
+
+.my-project-links:hover{
+    background-color: var(--hover-green);
+}
+
+/* adjusts webpage to viewport 1800px or more */
+@media screen and (min-width: 1800px){
+    .about-me p{
+        font-size: 1.3em;
+    }
+
+    .my-projects{
+        width: 1920px;
+        margin: -10px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+    nav, header, footer{
+        margin-right: -100px;
+    }
+}  
+
+/* adjusts webpage to viewport 1355px or less */
+@media screen and (max-device-width: 1355px){
+    li{
+        display: flex; 
+        align-items: center;
+        margin: -50px;
+    }
+
+    ul{
+        margin: -20px;
+    }    
+    
+
+    .about-me p{
+        font-size: 0.9em;
+    }
+
+    .my-projects img{
+        height: 400px; 
+        width: 400px;
+    }
+
+    .my-projects h1{
+        height: 400px; 
+        width: 400px;
+        font-size: 2.0em;
+    }
+
+    address{
+        margin: -20px;
+    }
+}
